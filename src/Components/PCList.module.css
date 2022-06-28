@@ -1,0 +1,25 @@
+.listUl {
+    list-style: none;
+    padding: 0;
+}
+
+.listLi {
+    margin: 10px;
+
+    border-bottom: 1px solid black;
+
+}
+
+.listContainer {
+    background-color: #dedede;
+    padding: 5px;
+    border-radius: 20px;
+    width: 60%;
+    margin: auto;
+}
+
+.listLink {
+    text-decoration: none;
+    font-size: 2rem;
+
+}

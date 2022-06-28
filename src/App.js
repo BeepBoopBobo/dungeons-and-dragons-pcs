@@ -6,7 +6,9 @@ import PCList from "./Components/PCList";
 function App() {
 
   return <>
+
     <PCList />
+
   </>;
 }
 

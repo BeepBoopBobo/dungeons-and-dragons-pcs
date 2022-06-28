@@ -5,19 +5,27 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PCSheet from './Pages/PCSheet';
+import EditCharacter from './Pages/EditCharacter';
+import store from "./store";
+import { Provider } from "react-redux/es/exports";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='pcs' element={<PCSheet />} >
-          <Route path=':pcId' element={<PCSheet />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<App />} />
+          <Route path='pcs' element={<PCSheet />} >
+            <Route path=':pcId' element={<PCSheet />} />
+          </Route>
+          <Route path='edit'>
+            <Route path=':pcId' element={<EditCharacter />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
