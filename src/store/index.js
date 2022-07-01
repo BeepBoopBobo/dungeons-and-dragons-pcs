@@ -1,38 +1,39 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-let data = {}
-
-async function fetchData(char) {
-    const response = await axios.get(`https://dnd-pcs-8dbe6-default-rtdb.europe-west1.firebasedatabase.app/characters/${char}.json`)
-    console.log(response.data);
-}
-
+const initialState = {};
 // class: 'rogue', level: 1, dex: 10, str: 10, int: 10
 const pcStats = createSlice({
     name: 'characterStats',
-    initialState: {},
+    initialState,
     reducers: {
-        incLevel(state) {
-            // state.level++;
-            console.log(state);
+        incLevel(state, action) {
+            if (state.initialState[action.payload].level >= 20) {
+                console.log('Level is too high');
+
+            } else {
+                state.initialState[action.payload].level++;
+            }
         },
-        decLevel(state) {
+        decLevel(state, action) {
+            if (state.initialState[action.payload].level <= 1) {
+                console.log('Level is too low');
+            } else {
+                state.initialState[action.payload].level--;
+            }
         },
-        incDex(state) {
+        increaseAtribute(state, action) {
+            // console.log(action.payload.atribute);
+            // console.log(action.payload.id);
+            state.initialState[action.payload.id].atributes[action.payload.atribute]++;
         },
-        decDex(state) {
-        },
-        incStr(state) {
-        },
-        decStr(state) {
-        },
-        incInt(state) {
-        },
-        decInt(state) {
+        decreaseAtribute(state, action) {
+            state.initialState[action.payload.id].atributes[action.payload.atribute]--;
         },
         init(state, action) {
-            fetchData(action.payload);
+            // console.log('action.payload: ', action.payload);
+            // console.log('INIT initialState: ', state.initialState);
+            state.initialState = action.payload;
+
         }
     }
 });

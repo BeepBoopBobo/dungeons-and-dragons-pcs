@@ -1,0 +1,115 @@
+.charSheet h4 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.charSheet:first-child {
+    display: block;
+}
+
+
+
+.Column {
+    margin-top: 20px;
+    display: flex;
+}
+
+.skillsContainer {
+    margin-left: 10px;
+}
+
+.atributeContainer {
+    width: 100px;
+    padding: 10px;
+    background-color: #dedede;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.atributeModifier {
+    font-size: 2rem;
+    padding: 10px 0;
+}
+
+.atributeName {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.atributeNumContainer {
+    display: flex;
+    margin-bottom: -10px;
+
+}
+
+.atributeNumber {
+    margin: auto;
+    width: 50px;
+    border: 3px solid black;
+    background-color: white;
+    border-top: none;
+    border-radius: 40%;
+}
+
+
+.atributeUl,
+.savingThrowsUl,
+.proficienciesUl {
+    list-style: none;
+    padding: 0;
+}
+
+.atributeLi {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.savingThrowsName,
+.proficienciesName {
+    position: absolute;
+    left: 50px;
+}
+
+.proficienciesAtribute {
+    color: #dedede;
+}
+
+.savingThrowsValue,
+.proficienciesValue {
+    margin-left: 10px;
+}
+
+.savingThrowsLi,
+.proficienciesLi {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.proficienciesContainer,
+.savingThrowsContainer,
+.proficiency {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.proficiency {
+    margin-top: 15px;
+    padding: 5px 0px 5px;
+}
+
+.proficiencyValue {
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.proficiencyTitle {
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+.headerContainer {
+    height: 100px;
+    background-color: #dedede;
+    display: block;
+}
+
+.headerProps {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.headerProp {
+    margin: 5px;
+}
+
+.headerContainer h1 {
+    margin: 10px;
+    text-align: center;
+    border-bottom: 5px solid white;
+
+}
