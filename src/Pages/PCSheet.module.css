@@ -1,6 +1,11 @@
 .charSheet {
     width: 80%;
     margin: auto;
+
+}
+
+.charContent {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }

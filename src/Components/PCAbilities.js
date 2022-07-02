@@ -12,12 +12,13 @@ const PCAbilities = (props) => {
     const charState = globalState.initialState[props.pcId];
 
 
+    // TODO loading icons
 
     const renderAtributes = () => {
-        // console.log(charState);
         let data = Object.entries(charState.atributes)
             .map(atribute => (atribute ?
-                <li key={`${props.pcID}-atribute-${atribute[0]}`} className={styles.atributeLi}>
+                <li key={`${props.pcID}-atribute-${atribute[0]}`}
+                    className={styles.atributeLi}>
                     <div className={styles.atributeName}>
                         {atribute[0]}
                     </div>
@@ -57,18 +58,26 @@ const PCAbilities = (props) => {
     const renderProficiencies = () => {
         let data = Object.entries(charState.proficiencies)
             .map(proficiency => (proficiency ?
-                <li key={`${props.pcID}-proficiency-${proficiency[0]}`} className={styles.proficienciesLi}>
+                <li key={`${props.pcID}-proficiency-${proficiency[0]}`}
+                    className={styles.proficienciesLi}>
                     {proficiency[1].value ? '◉' : '○'}
-                    <span className={styles.proficienciesValue}>{proficiency[1].value ?
-                        (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2 + charState.profbonus))
-                        : (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2))}</span>
-                    <span className={styles.proficienciesName}>{proficiency[0]}
-                        <span className={styles.proficienciesAtribute}> ({proficiency[1].atribute.slice(0, 3)})</span></span>
+                    <span className={styles.proficienciesValue}>
+                        {proficiency[1].value ?
+                            (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2 + charState.profbonus))
+                            : (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2))}</span>
+                    <span className={styles.proficienciesName}>
+                        {proficiency[0]}
+                        <span className={styles.proficienciesAtribute}>
+                            ({proficiency[1].atribute.slice(0, 3)})
+                        </span>
+                    </span>
                 </li>
                 : 'none'));
         return data;
     }
-    return <div className={styles.Column}>
+
+
+    return <div className={styles.abilitiesColumn}>
         <div className={styles.atributeContainer}>
             <ul className={styles.atributeUl}>
                 {charState.atributes ? renderAtributes() : 'not loaded'}
@@ -77,8 +86,12 @@ const PCAbilities = (props) => {
 
         <div className={styles.skillsContainer}>
             <div className={styles.proficiency}>
-                <span className={styles.proficiencyValue}> {charState.profbonus}</span>
-                <span className={styles.proficiencyTitle}>Proficiency Bonus</span>
+                <span className={styles.proficiencyValue}>
+                    {charState.profbonus}
+                </span>
+                <span className={styles.proficiencyTitle}>
+                    Proficiency Bonus
+                </span>
             </div>
             <div className={styles.savingThrowsContainer}>
                 <ul className={styles.savingThrowsUl}>

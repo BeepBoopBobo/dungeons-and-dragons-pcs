@@ -11,6 +11,7 @@ const PCHeader = (props) => {
     const globalState = useSelector((state) => state);
     const charState = globalState.initialState[props.pcId];
 
+    // TODO loading icons instead of empty strings
     return <div className={styles.headerContainer}>
 
         <h1>Player character sheet: {charState.name ? charState.name : ''}</h1>
@@ -19,9 +20,9 @@ const PCHeader = (props) => {
                 Class: {charState.class ? charState.class : ''}
             </div>
             <div className={styles.headerProp}>
-                Level: {charState.level ? charState.level : ''}
-                <button onClick={() => dispatch(pcActions.incLevel(props.pcId))} >up</button>
-                <button onClick={() => dispatch(pcActions.decLevel(props.pcId))} >down</button>
+                Level: {charState.level ? charState.level + ' ' : ''}
+                <button onClick={() => dispatch(pcActions.incLevel(props.pcId))} >+</button>
+                <button onClick={() => dispatch(pcActions.decLevel(props.pcId))} >-</button>
             </div>
             <div className={styles.headerProp}>
                 Race: {charState.race ? charState.race : ''}

@@ -1,5 +1,5 @@
 import React from "react";
-import PCList from "./Components/PCList";
+import PCList from "./Components/PCSList";
 import { pcActions } from "./store";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -13,6 +13,7 @@ import './App.css';
 function App() {
   const dispatch = useDispatch();
 
+  //fetching characters from firebase
   useEffect(() => {
     const loadChars = async () => {
       await axios.get('https://dnd-pcs-8dbe6-default-rtdb.europe-west1.firebasedatabase.app/characters.json')
