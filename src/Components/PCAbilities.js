@@ -55,6 +55,7 @@ const PCAbilities = (props) => {
                 : 'none');
         return data;
     }
+
     const renderProficiencies = () => {
         let data = Object.entries(charState.proficiencies)
             .map(proficiency => (proficiency ?
@@ -77,7 +78,7 @@ const PCAbilities = (props) => {
     }
 
 
-    return <div className={styles.abilitiesColumn}>
+    return <>
         <div className={styles.atributeContainer}>
             <ul className={styles.atributeUl}>
                 {charState.atributes ? renderAtributes() : 'not loaded'}
@@ -93,6 +94,7 @@ const PCAbilities = (props) => {
                     Proficiency Bonus
                 </span>
             </div>
+
             <div className={styles.savingThrowsContainer}>
                 <ul className={styles.savingThrowsUl}>
                     <h4>Saving Throws</h4>
@@ -109,8 +111,7 @@ const PCAbilities = (props) => {
             </div>
 
         </div>
-    </div>
-
+    </>
 }
 
 export default PCAbilities;

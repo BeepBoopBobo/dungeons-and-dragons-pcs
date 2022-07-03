@@ -1,28 +1,26 @@
-.combatColumn {
-    width: 30%;
-    margin-top: 20px;
-    gap: 10px;
-    border-radius: 20px;
-}
-
 .combatStats {
-    width: 100%;
-    padding: 10px;
     background-color: #dedede;
+    width: 100%;
+    margin: auto;
     border-radius: 20px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
+    row-gap: 10px;
 }
 
 .combatStatsRow {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: auto;
+    margin-top: 20px;
     display: flex;
     gap: 10px;
     align-content: stretch;
+}
+
+.combatStatsRow:last-child {
+    margin-bottom: 20px;
 }
 
 .armorClass {
@@ -42,4 +40,12 @@
     border: 1px solid black;
     border-radius: 20px;
     background-color: white;
+}
+
+.statHeader {
+    color: #6e6e6e;
+}
+
+.statValue {
+    font-size: 1.5rem;
 }

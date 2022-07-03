@@ -29,6 +29,25 @@ const pcStats = createSlice({
         decreaseAtribute(state, action) {
             state.initialState[action.payload.id].atributes[action.payload.atribute]--;
         },
+        increaseDeathSaves(state, action) {
+            if (state.initialState[action.payload.id][action.payload.type] <= 2) {
+                state.initialState[action.payload.id][action.payload.type]++;
+
+            } else {
+                console.log('death save is too high')
+            }
+        },
+        decreaseDeathSaves(state, action) {
+            if (state.initialState[action.payload.id][action.payload.type] >= 1) {
+                state.initialState[action.payload.id][action.payload.type]--;
+
+            } else {
+                console.log('death save is too low')
+            }
+        },
+        addToInventory(state, action) {
+
+        },
         //initialize state with payload content
         init(state, action) {
             state.initialState = action.payload;

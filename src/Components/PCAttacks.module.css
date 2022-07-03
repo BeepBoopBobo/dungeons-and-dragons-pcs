@@ -1,0 +1,24 @@
+.weaponsContainer {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+
+}
+
+.weaponsTable {
+    width: 90%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.weaponsTable th {
+    color: #6e6e6e;
+    font-weight: 500;
+}
+
+.weaponsTable td {
+    background-color: #dedede;
+    text-align: center;
+}
