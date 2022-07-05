@@ -1,0 +1,66 @@
+.createCharContainer {
+    width: 80%;
+    margin: auto;
+}
+
+.raceIconsContainer,
+.weaponsIconsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.item {
+    position: relative;
+    text-align: center;
+}
+
+.itemSelected {
+    position: relative;
+    text-align: center;
+    box-shadow: 10px 10px 5px;
+}
+
+
+.item:hover {
+    box-shadow: 5px 5px 5px #dedede;
+}
+
+.item img,
+.itemSelected img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border: solid 2px black;
+}
+
+.item img {
+    background-color: #dedede;
+}
+
+.itemSelected img {
+    background-color: white;
+}
+
+.itemHeader {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.itemSelectedHeader {
+    background-color: rgba(110, 110, 110, 0.8);
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}

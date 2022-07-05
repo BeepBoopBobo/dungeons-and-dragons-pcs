@@ -22,7 +22,7 @@ function App() {
         })
     }
     loadChars();
-  });
+  }, []);
 
   return <>
     <PCList />

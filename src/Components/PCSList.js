@@ -23,7 +23,9 @@ const PCList = () => {
                         </Link>
                     </li>) : 'not loaded'}
         </ul>
-        <button>Add a character</button>
+        <Link to='create' className={styles.listLink}>
+            <button>Add a character</button>
+        </Link>
     </div>
 
 }

@@ -1,6 +1,7 @@
 .inventoryContainer {
     width: 100%;
     background-color: #dedede;
+    border-radius: 20px;
 }
 
 .inventoryContainer h4 {

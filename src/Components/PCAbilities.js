@@ -50,7 +50,8 @@ const PCAbilities = (props) => {
                             (Math.floor((charState.atributes[st[0]] - 10) / 2 + charState.profbonus))
                             : Math.floor((charState.atributes[st[0]] - 10) / 2)}
                     </span>
-                    <span className={styles.savingThrowsName}>{st[0]}</span>
+                    <span className={styles.savingThrowsName}>{st[0]}
+                    </span>
                 </li>
                 : 'none');
         return data;
@@ -65,7 +66,8 @@ const PCAbilities = (props) => {
                     <span className={styles.proficienciesValue}>
                         {proficiency[1].value ?
                             (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2 + charState.profbonus))
-                            : (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2))}</span>
+                            : (Math.floor((charState.atributes[proficiency[1].atribute] - 10) / 2))}
+                    </span>
                     <span className={styles.proficienciesName}>
                         {proficiency[0]}
                         <span className={styles.proficienciesAtribute}>
@@ -109,7 +111,6 @@ const PCAbilities = (props) => {
                     {charState.proficiencies ? renderProficiencies() : 'not loaded'}
                 </ul>
             </div>
-
         </div>
     </>
 }

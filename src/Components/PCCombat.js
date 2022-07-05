@@ -14,7 +14,6 @@ const PCCombat = (props) => {
         Object.values(charState.inventory.armor).map(item =>
             item.equipped ? armor = item : null);
     }
-    getArmor();
 
     const deathSavePoints = (data) => {
         let numOfSaves = data;
@@ -29,6 +28,8 @@ const PCCombat = (props) => {
         }
         return arr;
     }
+
+    getArmor();
 
     return <div className={styles.combatColumn}>
         <div className={styles.combatStats}>
@@ -63,8 +64,8 @@ const PCCombat = (props) => {
             </div>
             <div className={styles.combatStatsRow}>
                 <div className={styles.statContainer}>
-                    <span className={styles.statHeader}>Hit dice </span><br />
-                    <span className={styles.statValue}></span>{charState.hitdie}
+                    <span className={styles.statHeader}>Hit dice: {charState.hitdice.maxnumofdice}d{charState.hitdice.die} </span><br />
+                    <span className={styles.statValue}></span>{charState.hitdice.numofdice} remaining
                 </div>
                 <div className={styles.statContainer}>
                     <span className={styles.statHeader}>Death Saves: </span><br />
